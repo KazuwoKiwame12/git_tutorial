@@ -1,0 +1,4 @@
+Hello, Rebase.
+I like rebase of Git.
+Hello Sushi.
+Hello
