@@ -6,7 +6,8 @@
 4. git revert
 5. git tag
 6. git rm
-7. fixup・squash系の操作
-8. コミットメッセージ
-9. github actions
-10. ssh接続
+7. cherry-pick
+8. fixup・squash系の操作
+9. コミットメッセージ
+10. github actions
+11. ssh接続
