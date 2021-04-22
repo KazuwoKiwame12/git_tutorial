@@ -1,6 +1,5 @@
 # git_tutorial
 ## 確認したい操作一覧
-参考文献: https://book.git-scm.com/
 - gitコマンドでは、--helpオプションをつけると、指定したコマンドの詳細情報を把握できる
 - git switch
     - -cでブランチを新規作成して、checkoutする
@@ -26,8 +25,13 @@
     - コミットしない: -n...indexに戻すだけでcommitまで行われないようにする
     - マージコミットの取り消しにおける、マージした2つのコミット(親)のうちどちらに戻すのかを指定する(オプションなしではできない): -m parent-number
     - ex) git revert HEAD~3(HEAD以降の3番目のcommitをrevert), git revert -n master~5..master~2
+    - ex) git revert HEAD~4..HEAD(HEAD~4にはなくて、HEADには存在する全てのcommitをrevertする...git revert --continueするたびに、vimの編集画面が出てくる)
 - git tag
 - git rm
 - cherry-pick
 - github actions
 - ssh接続
+
+## 参考文献
+- https://git-scm.com/book/en/v2/Git-Tools-Revision-Selection#_commit_ranges
+- https://book.git-scm.com/
