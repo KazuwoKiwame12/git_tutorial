@@ -7,16 +7,22 @@
     - 指定したファイルなどの変更をなくす
 - [git rebase](https://git-scm.com/book/ja/v2/Git-%E3%81%AE%E3%83%96%E3%83%A9%E3%83%B3%E3%83%81%E6%A9%9F%E8%83%BD-%E3%83%AA%E3%83%99%E3%83%BC%E3%82%B9)
     - --onto,
-    - --continue,
-    - --abort,
-    - -i
+    - --continue: Restart the rebasing process after having resolved a merge conflict.,
+    - --abort: Abort the rebase operation and reset HEAD to the original branch. If <branch> was provided when the rebase operation was started, then HEAD will be reset to <branch>. Otherwise HEAD will be reset to where it was when the rebase operation was started.,
+    - -i: rebaseの対象となるcommtiのリストを作成し、rebaseする前にそれらを編集できるようにする
         - fixup: 指定したcommitメッセージを削除し、前のcommitと融合する
         - squash: 前のコミットと融合し、コミットメッセージを編集できる
+        - edit: user commits, but stop for amending
+            - この結果、指定したcommit時点に戻り、ファイルの編集などが可能になる。
+            - そして、加えたい変更ができたらgit commit --amendすることで指定したcommitを新しいcommitに置き換える
+            - そして、メッセージを編集する画面(vim)が出てくるので、メッセージを編集したければ編集する
+            - その後、git rebase --continueで作業プロセスが進んで終了する
     - git pull --rebase
 - git commit
     - インデックスの状態を記録する(addは、変更をインデックスに登録する)
     - --allow-empty
-    - [--amend](https://book.git-scm.com/book/en/v2/Git-Basics-Undoing-Things): 前のcommitの修正を行う
+    - [--amend](https://book.git-scm.com/book/en/v2/Git-Basics-Undoing-Things): 新しいコミットを作成することで、現在のブランチの先端を置き換えます。=前のcommitの変更をindexに戻して、新しいコミットを作成できる。
+    - ex) git commit(No1) → 前回のcommitに入れたかった編集をindexにステージングする。 → git commit --amendで、前のコミットの変更をindexに戻し、再度コミットする。
 - git revert
     - rebert...元に戻す
     - 取り消したいこっ水戸を打ち消すようなコミットを新しく作成する
