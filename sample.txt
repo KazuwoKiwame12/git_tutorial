@@ -5,6 +5,3 @@ Hello Four.
 Hello Five.
 Hello Six.
 Hello Seven.
-
-Hoge
-Hoge
