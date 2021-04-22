@@ -25,7 +25,7 @@
     - メッセージの編集: -e or --edit(default)、編集しない: --no-edit
     - コミットしない: -n...indexに戻すだけでcommitまで行われないようにする
     - マージコミットの取り消しにおける、マージした2つのコミット(親)のうちどちらに戻すのかを指定する(オプションなしではできない): -m parent-number
-    - ex) git revert HEAD~3(HEADから3番目のcommitをrevert), git revert -n master~5..master~2
+    - ex) git revert HEAD~3(HEAD以降の3番目のcommitをrevert), git revert -n master~5..master~2
 - git tag
 - git rm
 - cherry-pick
