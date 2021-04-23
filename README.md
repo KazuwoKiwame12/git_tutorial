@@ -34,10 +34,14 @@
     - ex) git revert HEAD~4..HEAD(HEAD~4にはなくて、HEADには存在する全てのcommitをrevertする...git revert --continueするたびに、vimの編集画面が出てくる)
 - [git tag](https://qiita.com/growsic/items/ed67e03fda5ab7ef9d08)
     - 特定のコミットに任意の名前をつけることができる=開発中のキリがいいコミット(リリースしたタイミングなど)に目印をつけておくことができる
-    - 原則として、remoteにpushしたtagは削除・変更してはならない...tag更新しても、他の作業者のtagが自分の更新で上書きされないため...Gitはtagをバージョン管理していない
+    - 原則として、remoteにpushしたtagは削除・変更してはならない...tag更新しても、他の作業者のtagが自分の更新で上書きされないため...Gitはtagをバージョン管理していないgit 
         - 参考文献: https://qiita.com/growsic/items/60928fc67c9efe373a73
         - 解決手法1. 別名のtagを利用する(健全なやり方)
         - 解決手法2. -fオプションで強制pushする。そして、そのリポジトリに関わる全ユーザに、古いtagを削除して、新しいtagをfetchしてもらう。(狂気的なやり方)
+- git config
+    - --gloabal or --local or --systemなどで、どこの設定ファイルを操作するかを決定できる
+    - -lで一覧確認
+    - user.nameやuser.emailは、commiterやauthorとして利用されるので、公開したくないメアドや名前が設定されていれば、変更すること
 - git rm
 - cherry-pick
 - detached HEADの理解
