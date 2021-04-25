@@ -43,6 +43,10 @@
     - -lで一覧確認
     - user.nameやuser.emailは、commiterやauthorとして利用されるので、公開したくないメアドや名前が設定されていれば、変更すること
 - git rm
+    - 参考文献: https://www.atmarkit.co.jp/ait/articles/2006/04/news022.html
+    - 指定したファイルをGitの管理対象から外し、ワークツリーやインデックスからも削除する
+        - ワークツリー→インデックス→リポジトリ
+    - ワークツリーに残しておきたい場合は、--cachedオプションを利用する
 - git cherry-pick
 - git filter-brnach
     - そもそもそんなに使う場面がなさげ
