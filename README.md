@@ -65,6 +65,20 @@
             - indexを書き換えるフィルタで、ツリーをチェックアウトしないので、tree-filterより高速
             - git rm --cached --ignore-unmatch...などが一緒によく使われている
         - etc
+- git reset
+    - git resetには3つのフォームがある
+    1. git reset [-q] [<"tree-ish">] [--] <"paths">...
+        -  git add <"paths">の逆
+    2. git reset (--patch | -p) [<"tree-ish">] [--] [<"paths">...]
+        - よくわからんので保留
+    3. git reset [<"mode">] [<"commit">]: 一番使う
+        - 参考文献: https://www.r-staffing.co.jp/engineer/entry/20191129_1
+        - 現在のブランチのヘッドを<"commit">にリセットして、<"mode">に応じて、インデックス(<"commit">のツリーにリセット)とワーキングツリーを更新できる。
+        - <"mode">が省略された場合、defaultで--mixedになる
+            - 主に利用されるものは、3つ(他にもある)
+            - --soft: 指定したcommitからHEADまでのcommitが取り消されて、それらの変更内容がindexのステージ上に残る
+            - --mixed: 指定したcommitからHEADまでのcommitが取り消されて、それらの変更内容がindexのステージ上からも下ろされて、ワーキングツリーに残る
+            - --hard: 指定したcommitからHEADまでのcommitが取り消されて、それらの変更がindexのステージやワーキングツリーからも消える
 - detached HEADの理解
 - github actions
 - ssh接続
