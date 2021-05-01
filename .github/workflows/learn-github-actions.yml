@@ -1,7 +1,7 @@
 name: learn-github-actions
 on: [push]
 jobs:
-  check-bats-version:
+  hello-world:
     runs-on: ubuntu-latest
     steps:
       - name: Hello World
