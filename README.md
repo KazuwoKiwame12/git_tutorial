@@ -81,6 +81,14 @@
 - detached HEADの理解
 - github actions
     - [参考文献1](https://docs.github.com/ja/actions/learn-github-actions/introduction-to-github-actions)
+    - Github関連のイベントをトリガーにして、さまざまな処理を行う
+    - ランナー(GithubActionsランナーアプリケーションがインストールされているサーバ)があり、自分のランナーかGithubホストランナーを利用することができる。
+        - ワークフローを実行するためのホストされた仮想マシン
+    - actionごとにデーが共有される
+    - できること
+        - 定期的なtest・build・deploy・issue/PRの作成
+        - 複雑なワークフロー
+        - 要は、Github関連のイベントをトリガに、仮想マシンで何らかの定められ処理を行うということなので、割と大抵のことはできそう
 - ssh接続
 
 ## 参考文献
